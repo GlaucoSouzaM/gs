@@ -14,7 +14,7 @@ background-size: cover;
 background color image repeat/size
 RESUMIR EM COMANDO SÓ:
 */
-  background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+  background: url(./assets/bg-mobile.png) no-repeat top center/cover;
 }
 
 body * {
