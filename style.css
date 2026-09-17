@@ -5,15 +5,6 @@
 }
 
 body {
-  /*
-background-image: url(./assets/bg-mobile.jpg);
-background-repeat: no-repeat;
-background-position: top center;
-background-size: cover;
-
-background color image repeat/size
-RESUMIR EM COMANDO SÓ:
-*/
   background: url(./assets/bg-mobile.png) no-repeat top center/cover;
 }
 
@@ -48,8 +39,6 @@ body * {
   margin-top: 0;
 }
 
-/* links */
-
 ul {
   list-style: none;
   display: flex;
@@ -73,14 +62,10 @@ ul li a {
   gap: 8px;
 }
 
-/* pseudo-seletor */
-
 ul li a:hover {
   background-color: rgba(255, 255, 255, 0.05);
   border: 1.5px solid white;
 }
-
-/* social links*/
 
 #social-links {
   display: flex;
