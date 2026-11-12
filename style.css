@@ -5,7 +5,13 @@
 }
 
 body {
-  background: url(./assets/bg-mobile.png) no-repeat top center/cover;
+  background-color: #050806;
+  background-image:
+    radial-gradient(ellipse 700px 520px at 12% 16%, rgba(14, 120, 50, 0.72) 0%, rgba(9, 65, 28, 0.42) 42%, rgba(5, 20, 10, 0.08) 75%, transparent 100%),
+    radial-gradient(ellipse 550px 420px at 88% 70%, rgba(12, 85, 42, 0.14) 0%, transparent 70%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 body * {
@@ -20,8 +26,6 @@ body * {
 }
 
 #profile {
-  width: 120px;
-  height: 120px;
   margin: 0 auto 28px;
   text-align: center;
 }
@@ -30,13 +34,21 @@ body * {
   width: 112px;
   height: 112px;
   border-radius: 50%;
-  overflow: hidden;
+  object-fit: cover;
+  border: 2.5px solid #38ef7d;
+  box-shadow: 0 0 24px rgba(56, 239, 125, 0.75), 0 0 55px rgba(14, 165, 233, 0.45);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#profile img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 32px rgba(56, 239, 125, 0.9), 0 0 70px rgba(14, 165, 233, 0.6);
 }
 
 #profile p {
   font-weight: 500;
   line-height: 24px;
-  margin-top: 0;
+  margin-top: 12px;
 }
 
 ul {
@@ -51,20 +63,32 @@ ul li a {
   align-items: center;
   justify-content: center;
   padding: 16px 24px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(16, 185, 129, 0.04);
+  border: 1px solid rgba(74, 222, 128, 0.4);
   border-radius: 8px;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   text-decoration: none;
-  font-weight: bold;
-  transition: background 0.2s;
+  font-weight: 600;
+  transition: all 0.25s ease;
   gap: 8px;
 }
 
+ul li:first-child a {
+  background: rgba(16, 185, 129, 0.3);
+  border-color: rgba(74, 222, 128, 0.65);
+}
+
 ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1.5px solid white;
+  background: rgba(16, 185, 129, 0.35);
+  border-color: #38ef7d;
+  box-shadow: 0 0 18px rgba(56, 239, 125, 0.45);
+  transform: translateY(-2px);
+}
+
+.seta-diagonal {
+  transform: rotate(45deg);
+  font-size: 18px;
 }
 
 #social-links {
@@ -81,12 +105,21 @@ ul li a:hover {
   justify-content: center;
   padding: 16px;
   border-radius: 50%;
-  transition: background 0.2s;
+  transition: all 0.25s ease;
+}
+
+#social-links a ion-icon {
+  transition: color 0.25s ease;
 }
 
 #social-links a:hover {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 16px;
+  background: rgba(16, 185, 129, 0.2);
+  box-shadow: 0 0 14px rgba(56, 239, 125, 0.35);
+  transform: translateY(-2px);
+}
+
+#social-links a:hover ion-icon {
+  color: #38ef7d;
 }
 
 footer {
